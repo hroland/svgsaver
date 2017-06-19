@@ -1,0 +1,8 @@
+{
+  "name": "SVG Saver",
+  "version": "1.0",
+  "description": "Mini tool for designers and developers to quickly turn SVG into SVG files",
+  "main": "main.js",
+  "author": "Roland Horváth",
+  "license": "MIT"
+}
