@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     $('[data-link]').each(function() { $(this).on('click', function() {
         window.open($(this).attr('data-link'), "_system");
-    })});
+    });});
 
 
     var delay = (function(){
@@ -70,7 +70,7 @@ $(document).ready(function() {
                 }
 
             }
-        })
+        });
     }
 
     checkForUpdates();
