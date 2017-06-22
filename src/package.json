@@ -1,11 +1,12 @@
 {
-  "name": "SVG Saver",
-  "version": "1.0",
-  "description": "Mini tool for designers and developers to quickly turn SVG into SVG files",
+  "name": "SVGSaver",
+  "version": "1.0.0",
+  "description": "Small tool for designers and developers to quickly turn SVG code into SVG files",
   "main": "main.js",
-  "author": "Roland Horváth",
+  "author": "Roland Horváth <hello@rolandhorvath.hu> (http://rolandhorvath.hu)",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . SVGSaver --platform=darwin --arch=x64 --electron-version=1.6.2 --ignore=node_modules --app-bundle-id=com.hroland.svgsaver --app-category-type=public.app-category.developer-tools --app-version=1.0.0 --app-icon=../res/appIcon.icns --out=../builds/"
   }
 }

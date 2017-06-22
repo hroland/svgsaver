@@ -1,0 +1,198 @@
+/* Copyright (c) 2017 Roland Horváth. All Rights Reserved */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Rutan';
+    font-weight: 500;
+    background-color: #252C38;
+    color: #6E7B92;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    /*background-image: url('../images/mask.png');*/
+}
+
+* {
+    box-sizing: border-box;
+    /*user-select: none;*/
+    cursor: default;
+}
+
+*:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pane {
+    padding: 12px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.pane .title {
+    margin: 0;
+    margin-bottom: 8px;
+    line-height: 16px;
+}
+
+.pane.main {
+    background-color: #2A3341;
+    float: left;
+    width: calc(100% - 200px);
+}
+
+#svg-input {
+    background-color: #202732;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    resize: none;
+    color: #fff;
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    line-height: 18px;
+    font-size: 16px;
+    width: 100%;
+    height: calc(100% - 44px);
+    user-select: all;
+    cursor: text;
+}
+
+#svg-input.light {
+    background-color: #EBF0FF;
+}
+
+.pane.main .footer {
+    font-size: 14px;
+    margin-top: -4px;
+}
+
+.pane.main .footer .version {
+    float: left;
+    margin-right: 12px;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+}
+
+/* 🐰🥚 */
+.pane.main .footer .version.rotate {
+    transform: rotate(360deg);
+}
+
+.pane.main .footer .update:hover {
+    text-decoration: underline;
+}
+
+.pane.main .footer .author {
+    float: right;
+}
+
+.pane.main .footer .author .normailzed {
+    font-family: 'Verdana';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pane.main .footer i {
+    font-size: 16px;
+    margin-left: 2px;
+    line-height: 14px;
+}
+
+.pane.main .footer .light {
+    opacity: 0.75;
+}
+
+
+
+.pane.right {
+    background-color: #343F51;
+    float: right;
+    width: 200px;
+}
+
+.pane.right .colors {
+    float: right;
+    margin-top: -1px;
+}
+
+.pane.right .colors button {
+    width: 14px;
+    height: 14px;
+    background: #4A5568;
+    border: none;
+    border-radius: 8px;
+}
+
+.pane.right .colors button.light {
+    background: #cad1e6;
+}
+
+.pane.right .colors button.dark {
+    background: #151b24;
+}
+
+.pane.right #preview svg {
+    width: 150px;
+    height: 150px;
+}
+
+#preview {
+    background-color: #2A3341;
+    border-radius: 4px;
+    width: 176px;
+    height: 176px;
+    padding: 13px;
+    transition: 0.1s linear;
+}
+
+#save-button {
+    background: #4A5568;
+    width: 176px;
+    height: 48px;
+    font-size: 17px;
+    font-family: 'Rutan';
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    padding: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+    transition: .05s linear
+}
+
+#save-button:hover {
+    background: #4E596E;
+}
+
+#save-button:active {
+    background: #444F61;
+}
+
+#save-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    to { transform: rotate(360deg) }
+}
